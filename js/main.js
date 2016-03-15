@@ -1,13 +1,12 @@
-grains.forEach(function (grain) {
-  var $li = $('<li>');
-  var $figure = $('<figure>');
+grains.forEach(function (item) {
+  var $ul = $('<ul>');
+  var $newLi = $('<li>');
   var $img = $('<img>');
-  var $caption = $('<figcaption>');
+  var $p = $('<p>');
 
-  $desc.html(grain.name);
-  $img.attr('src', 'images/' + dino.img);
+  $newLi.html(grain.name);
+  $('ul').append($newLi);
 
-  $figure.append($img, $caption);
-  $li.append($figure);
-  $ul.append($li);
+  $img.attr('src', 'images/' + grains.img);
+  $li.append($img);
 });
